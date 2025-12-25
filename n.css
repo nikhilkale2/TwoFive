@@ -1,3 +1,21 @@
 body {
   background-color: aquamarine;
 }
+.bulb {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 15px orange;
+  border: 2px solid orange;
+}
+button {
+  padding: 10px 20px;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 25px;
+  margin-left: 60px;
+}
