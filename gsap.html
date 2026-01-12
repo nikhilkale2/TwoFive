@@ -55,6 +55,27 @@
         width: 600px;
         height: 400px;
       }
+
+      @media (max-width: 768px) {
+        .page1 {
+          margin-top: 160px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+        .page1 img {
+          width: 100%;
+        }
+        .page2 img {
+          width: 100%;
+        }
+        .page3 img {
+          width: 100%;
+        }
+        .page4 img {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -101,5 +122,29 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <script>
+      let mm = gsap.matchMedia();
+
+      mm.add("(max-width:768px)", () => {
+        let mob = gsap.timeline();
+        mob.from(".page1 img", {
+          y: -400,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.3,
+        });
+      });
+
+      mm.add("(min-width:1400px)", () => {
+        let lap = gsap.timeline();
+        lap.from(".page1 img", {
+          y: -600,
+          duration: 1,
+          stagger: 0.3,
+          opacity: 0,
+        });
+      });
+    </script>
   </body>
 </html>
