@@ -162,6 +162,38 @@
       .images:hover img {
         transform: scale(1.2);
       }
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+      .btn button {
+        padding: 18px 50px;
+        border: none;
+        border-radius: 50px;
+
+        font-size: 18px;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn button::after {
+        content: "";
+        position: absolute;
+        width: 103%;
+        height: 109%;
+        background: linear-gradient(to bottom right, #fe45df, #f4ef44);
+        border-radius: 50px;
+        z-index: -1;
+      }
+      .btn button:hover {
+        z-index: 0;
+        color: white;
+      }
       @media (max-width: 768px) {
         body {
           overflow-x: hidden;
@@ -404,6 +436,10 @@
           />
         </div>
       </div>
+    </div>
+
+    <div class="btn">
+      <button>Click me!</button>
     </div>
 
     <script
