@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aqua;
+        padding: 10px 20px;
+      }
+      .logo h1 {
+        font-size: 45px;
+      }
+      .links {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .links li {
+        font-size: 25px;
+        padding: 12px;
+        transition: backgrouncolor 0.6s ease-in-out;
+      }
+      .links li:hover {
+        background-color: orange;
+      }
+      .links li:hover a {
+        color: white;
+      }
+      .icons {
+        display: flex;
+      }
+      .icons span {
+        padding: 8px 15px;
+        font-size: 25px;
+      }
+      .icons span:hover {
+        background-color: green;
+        color: white;
+      }
+      #menuicon {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          width: 100%;
+          height: 60px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: aqua;
+          padding: 20;
+        }
+        #menuicon {
+          display: block;
+          font-size: 30px;
+        }
+        .links {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><h1>Logo</h1></div>
+
+        <div id="menuicon">&#9776;</div>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Feature</a></li>
+          <li><a href="#">Reference</a></li>
+          <li><a href="#">Contact</a></li>
+          <div class="icons">
+            <span>&#128269; </span>
+            <span>&#128100; </span>
+            <span>&#128722; </span>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
