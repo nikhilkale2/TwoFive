@@ -201,6 +201,33 @@
         content: "Frontend Developer";
         color: #fe4343;
       }
+      .anim-txt {
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 40px;
+        min-width: 400px;
+      }
+      .anim-txt span {
+        position: relative;
+      }
+
+      .anim-txt span::before {
+        content: "Nikhil Sunil Kale";
+        color: #fe4343;
+      }
+      .anim-txt span::after {
+        border-left: 2px solid black;
+        animation: cursor 0.8s infinite;
+      }
+      @keyframes cursor {
+        to {
+          border-left: 2px solid #fe4343;
+        }
+      }
+
       @media (max-width: 768px) {
         body {
           overflow-x: hidden;
@@ -449,9 +476,7 @@
       <button>Click me!</button>
     </div>
 
-    <div class="Text">
-      <h1>I'am <span></span></h1>
-    </div>
+    <h1 class="anim-txt">I'am <span></span></h1>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"

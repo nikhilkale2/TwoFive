@@ -8,173 +8,246 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <style>
-      .box1 {
+      #page1 {
         width: 100%;
         height: 100vh;
-        background-color: #04bdfa;
-        display: inline-block;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+      }
+      #page1 .box {
+        width: 40%;
+        height: 400px;
+        background-color: darkgreen;
+        border-radius: 50px;
+      }
+      #page2 {
+        width: 100%;
+        height: 100vh;
+        background-color: red;
         display: flex;
         justify-content: space-around;
         align-items: center;
       }
-      .box1 img {
-        width: 35vmax;
-        height: 35vmax;
+      #page2 .box {
+        width: 25%;
+        height: 400px;
+        background-color: blue;
+        border-radius: 50px;
       }
-      .box2 {
+      #page3 {
         width: 100%;
         height: 100vh;
-        background-color: #00bfffbd;
-        display: inline-block;
+        background-color: deeppink;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #page3 .box {
+        width: 20%;
+        height: 400px;
+        background-color: white;
+        border-radius: 100px;
+      }
+      #page4 {
+        width: 100%;
+        height: 100vh;
+        background-color: deepskyblue;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #page4 .box {
+        width: 40%;
+        height: 400px;
+        background-color: deeppink;
+        border-radius: 10px;
+      }
+      #cursor {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: black;
+        position: fixed;
+        text-align: center;
+        pointer-events: none;
+        z-index: 100;
+      }
+      #para {
+        color: white;
+        font-size: 9px;
+        margin-top: 5px;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 800px;
+        background-color: antiquewhite;
+      }
+      .swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      .box2 img {
-        width: 35vmax;
-        height: 35vmax;
+
+      .swiper-slide .box {
+        width: 20%;
+        height: 400px;
+        background-color: gold;
       }
-      .box3 {
+      .string {
         width: 100%;
-        height: 100vh;
-        background-color: #04befc81;
-        display: inline-block;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .box3 img {
-        width: 400px;
         height: 200px;
-      }
-      .box4 {
-        width: 100%;
-        height: 100vh;
-        background-color: #1ec5fd61;
-        display: inline-block;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .box4 img {
-        width: 35vmax;
-        height: 35vmax;
       }
     </style>
   </head>
   <body>
-    <div class="container" data-scroll-container>
-      <div class="box1">
-        <img
-          data-scroll
-          data-scroll-speed="-3"
-          data-scroll-direction="horizontal"
-          src="https://images.unsplash.com/photo-1765211003784-a82564cb8d3d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="horizontal"
-          src="https://images.unsplash.com/photo-1767049147097-7742651f6644?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-      </div>
-      <div class="box2">
-        <img
-          data-scroll
-          data-scroll-direction="verticle"
-          data-scroll-speed="5"
-          src="https://images.unsplash.com/photo-1761839257864-c6ccab7238de?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-      </div>
-      <div class="box3">
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://images.unsplash.com/photo-1767818375174-0e3dede087c9?q=80&w=1182&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://images.unsplash.com/photo-1762647912263-90f0b45f9a2d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://images.unsplash.com/photo-1761839259112-aaea03db3633?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://images.unsplash.com/photo-1761839259112-aaea03db3633?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://images.unsplash.com/photo-1761839259112-aaea03db3633?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://images.unsplash.com/photo-1761839258671-6495fdc188b3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://plus.unsplash.com/premium_photo-1765465308206-6d92231b7b71?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://images.unsplash.com/photo-1767818375174-0e3dede087c9?q=80&w=1182&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-        <img
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-direction="verticle"
-          src="https://images.unsplash.com/photo-1767818375174-0e3dede087c9?q=80&w=1182&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-      </div>
-      <div class="box4">
-        <img
-          data-scroll
-          data-scroll-speed="-5"
-          data-scroll-offset="400, 400"
-          data-scroll-repeat="true"
-          src="https://images.unsplash.com/photo-1767876231901-d3592d131812?q=80&w=1145&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-        />
-      </div>
+    <div id="cursor">
+      <div id="para"></div>
+    </div>
+    <div id="page1">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div id="page2">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div id="page3">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div id="page4">
+      <div class="box"></div>
+      <div class="box"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="box"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="box"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="box"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="box"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="box"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="box"></div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div id="svgBox">
+      <svg>
+        <path
+          d="M 10 100 Q 500 100 990 100"
+          stroke="black"
+          fill="transparent"
+        />
+      </svg>
+    </div>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <script>
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector(".container"),
-        smooth: true,
-        initPosition: { x: 0, y: 400 },
+      // Initialize Lenis
+      function lenisanimation() {
+        const lenis = new Lenis();
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+      }
+      lenisanimation();
+
+      function swiperanimation() {
+        let swpier = new Swiper(".swiper", {
+          loop: true,
+          slidesPerView: 1,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          effect: "cards",
+          grabCursor: true,
+          cardsEffect: {
+            rotate: true,
+            perSlideOffset: 8,
+            perSlideRotate: 2,
+          },
+        });
+      }
+      swiperanimation();
+
+      let cursor = document.querySelector("#cursor");
+      let para = document.querySelector("#para");
+      let boxes = document.querySelectorAll(".box");
+
+      window.addEventListener("mousemove", (e) => {
+        gsap.to(cursor, {
+          x: e.x,
+          y: e.y,
+          ease: "back.out(1.7)",
+        });
+      });
+
+      boxes.forEach((box) => {
+        box.addEventListener("mousemove", () => {
+          para.innerHTML = "View More";
+          gsap.to(cursor, {
+            scale: 2,
+            duration: 0.4,
+            ease: "elastic.out(1,0.3)",
+          });
+        });
+
+        box.addEventListener("mouseleave", () => {
+          para.innerHTML = "";
+          gsap.to(cursor, {
+            scale: 1,
+          });
+        });
+      });
+
+      let initialPath = "M 10 100 Q 500 100 990 100";
+      let path = "M 10 100 Q 500 100 990 100";
+
+      let string = document.querySelector(".string");
+      string.addEventListener("mousemove", function (dets) {
+        path = `M 10 100 Q 500 ${dets.y} 990 100`;
+
+        gsap.to("svg path", {
+          attr: { d: path },
+          duration: 0.5,
+        });
       });
     </script>
   </body>
