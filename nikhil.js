@@ -85,7 +85,7 @@ function laptopScreen() {
         duration: 1.2,
         opacity: 0,
       },
-      "d"
+      "d",
     );
     page3.from(
       ".page3 .box7",
@@ -95,7 +95,7 @@ function laptopScreen() {
         duration: 1.2,
         opacity: 0,
       },
-      "d"
+      "d",
     );
     page3.from(
       ".page3 .box8",
@@ -105,7 +105,7 @@ function laptopScreen() {
         duration: 1.2,
         opacity: 0,
       },
-      "d"
+      "d",
     );
     page3.from(
       ".page3 .box9",
@@ -115,7 +115,7 @@ function laptopScreen() {
         duration: 1.2,
         opacity: 0,
       },
-      "d"
+      "d",
     );
 
     let page4 = gsap.timeline({
@@ -132,6 +132,173 @@ function laptopScreen() {
       opacity: 0,
       duration: 0.89,
     });
+
+    let page5 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page5",
+        scroller: "body",
+        start: "top 50%",
+        end: "top 25%",
+        scrub: true,
+      },
+    });
+    page5.from(
+      ".page5 .box5",
+      {
+        x: -300,
+        duration: 1,
+        opacity: 0,
+      },
+      "n",
+    );
+    page5.from(
+      ".page5 .box6",
+      {
+        y: -300,
+        opacity: 0,
+        duration: 1,
+      },
+      "n",
+    );
+    page5.from(
+      ".page5 .box7",
+      {
+        x: 300,
+        duration: 1,
+        opacity: 0,
+      },
+      "n",
+    );
+
+    let page6 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page6",
+        scroller: "body",
+        start: "top 40%",
+        end: "top 10%",
+        scrub: true,
+      },
+    });
+    page6.from(
+      ".page6 .box8",
+      {
+        x: -200,
+        y: -200,
+        opacity: 0,
+        duration: 1.2,
+      },
+      "k",
+    );
+    page6.from(
+      ".page6 .box9",
+      {
+        y: 300,
+        duration: 1.2,
+        opacity: 0,
+      },
+      "k",
+    );
+    page6.from(
+      ".page6 .box10",
+      {
+        x: 200,
+        y: 200,
+        duration: 1.2,
+        opacity: 0,
+      },
+      "k",
+    );
+
+    let page7 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page7",
+        scroller: "body",
+        start: "top 40%",
+        end: "top 10%",
+        scrub: true,
+      },
+    });
+    page7.from(
+      ".page7 .box11",
+      {
+        x: -300,
+        opacity: 0,
+        duration: 1.3,
+      },
+      "l",
+    );
+    page7.from(
+      ".page7 .box12",
+      {
+        x: 300,
+        duration: 1.2,
+        opacity: 0,
+      },
+      "l",
+    );
+    let page8 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page8",
+        scroller: "body",
+        start: "top 40%",
+        end: "top 10%",
+        scrub: true,
+      },
+    });
+    page8.from(".page8 .box13", {
+      x: 350,
+      y: -450,
+      duration: 1.3,
+      opacity: 0,
+    });
+
+    let page9 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page9",
+        scroller: "body",
+        start: "top 40%",
+        end: "top 10%",
+        scrub: true,
+      },
+    });
+    page9.from(
+      ".page9 .box14",
+      {
+        x: -300,
+        duration: 1.4,
+        opacity: 0,
+      },
+      "m",
+    );
+    page9.from(
+      ".page9 .box15",
+      {
+        x: -250,
+        y: -250,
+        duration: 1.4,
+        opacity: 0,
+      },
+      "m",
+    );
+    page9.from(
+      ".page9 .box16",
+      {
+        x: 250,
+        y: -250,
+        duration: 1.4,
+        opacity: 0,
+      },
+      "m",
+    );
+    page9.from(
+      ".page9 .box17",
+      {
+        x: 300,
+        duration: 1.4,
+        opacity: 0,
+      },
+      "m",
+    );
   });
 }
 
