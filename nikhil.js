@@ -299,6 +299,56 @@ function laptopScreen() {
       },
       "m",
     );
+
+    let page10 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".page10",
+        scroller: "body",
+        start: "top 55%",
+        end: "top 10%",
+        scrub: true,
+      },
+    });
+    page10.from(
+      ".page10 .box18",
+      {
+        x: -500,
+        y: -500,
+        opacity: 0,
+        duration: 1,
+      },
+      "a",
+    );
+    page10.from(
+      ".page10 .box19",
+      {
+        x: 500,
+        y: -500,
+        opacity: 0,
+        duration: 1,
+      },
+      "a",
+    );
+    page10.from(
+      ".page10 .box20",
+      {
+        x: -500,
+        y: 500,
+        duration: 1,
+        opacity: 0,
+      },
+      "a",
+    );
+    page10.from(
+      ".page10 .box21",
+      {
+        x: 500,
+        y: 500,
+        duration: 1,
+        opacity: 0,
+      },
+      "a",
+    );
   });
 }
 
@@ -309,15 +359,25 @@ function swiperjs() {
     loop: true,
     slidesPerView: 1,
     grabCursor: true,
-    effect: "coverflow",
+    effect: "creative",
     centeredSlides: true,
     slidesPerView: "auto",
-    coverflowEffect: {
-      slideShadows: true,
-      rotate: 150,
-      depth: 300,
-      stretch: 100,
-      modifier: 1,
+    creativeEffect: {
+      prev: {
+        translate: [-120, 0, -50],
+        rotate: [0, 0, -7],
+        opacity: 0.5,
+        scale: 0.9,
+        shadow: false,
+      },
+
+      next: {
+        translate: [120, 0, 50],
+        rotate: [0, 0, 7],
+        opacity: 0.5,
+        scale: 0.9,
+        shaodw: false,
+      },
     },
     pagination: {
       el: ".swiper-pagination",
